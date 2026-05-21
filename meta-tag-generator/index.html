@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport' />
+
+  <title>Meta Tag Generator</title>
+
+  <!-- Meta Tags -->
+  <meta name="description" content="Free modern meta tag generator for SEO, Open Graph, Twitter Cards, and website optimization." />
+  <meta name="keywords" content="meta tag generator, seo meta tags, open graph, twitter card, html meta tags" />
+  <meta name="author" content="Meta Tag Generator" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Meta Tag Generator" />
+  <meta property="og:description" content="Generate SEO meta tags instantly with a modern responsive interface." />
+  <meta property="og:type" content="website" />
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+</head>
+<body class="bg-light">
+
+  <!-- Header -->
+  <header class="border-bottom bg-white shadow-sm">
+    <div class="container py-3 container">
+      <h1 class="h4 m-0 fw-bold text-dark">
+        <i class="fa-solid fa-code text-primary me-2"></i>
+        Meta Tag Generator
+      </h1>
+
+      <button class="btn btn-primary btn-sm">
+        <i class="fa-solid fa-wand-magic-sparkles me-1"></i>
+        Generate
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+
+          <h2 class="fw-bold text-dark mb-3">
+            Modern SEO Meta Tag Generator
+          </h2>
+
+          <p class="text-secondary mb-4">
+            Create clean and optimized meta tags for SEO, Open Graph,
+            and Twitter Cards with a simple modern interface.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="pb-5">
+    <div class="container">
+
+      <div class="row g-4">
+
+        <!-- Generator Form -->
+        <div class="col-lg-8">
+
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+
+              <h3 class="h5 fw-bold mb-4">
+                <i class="fa-solid fa-gear text-primary me-2"></i>
+                Generate Meta Tags
+              </h3>
+
+              <form id="metaForm">
+
+                <div class="mb-3">
+                  <label class="form-label">Website Title</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="title"
+                    placeholder="Enter website title"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Description</label>
+                  <textarea
+                    class="form-control"
+                    id="description"
+                    rows="4"
+                    placeholder="Enter website description"
+                  ></textarea>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Keywords</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="keywords"
+                    placeholder="seo, meta tags, bootstrap"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Author</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="author"
+                    placeholder="Author name"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  class="btn btn-primary w-100"
+                >
+                  <i class="fa-solid fa-bolt me-2"></i>
+                  Generate Meta Tags
+                </button>
+
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Advertisement -->
+        <div class="col-lg-4">
+
+          <div class="card border-0 shadow-sm mb-4">
+            <div class="card-body text-center p-4">
+
+              <h4 class="h6 fw-bold mb-3">
+                <i class="fa-solid fa-rectangle-ad text-primary me-2"></i>
+                Advertisement
+              </h4>
+
+              <div
+                class="bg-light border rounded d-flex align-items-center justify-content-center"
+                style="height: 250px;"
+              >
+                <span class="text-secondary">
+                  Ads Space 300x250
+                </span>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+
+              <h4 class="h6 fw-bold mb-3">
+                <i class="fa-solid fa-circle-info text-primary me-2"></i>
+                Description
+              </h4>
+
+              <p class="text-secondary small mb-0">
+                This tool helps developers generate modern SEO meta tags
+                quickly and efficiently using a responsive Bootstrap layout.
+              </p>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Output -->
+      <div class="row justify-content-center mt-5">
+        <div class="col-lg-10">
+
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+
+              <div class="container mb-3">
+                <h3 class="h5 fw-bold m-0">
+                  <i class="fa-solid fa-code text-primary me-2"></i>
+                  Generated Code
+                </h3>
+
+                <button
+                  class="btn btn-outline-primary btn-sm"
+                  id="copyBtn"
+                >
+                  <i class="fa-solid fa-copy me-1"></i>
+                  Copy
+                </button>
+              </div>
+
+              <textarea
+                class="form-control"
+                rows="12"
+                id="output"
+                readonly
+              ></textarea>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-top py-4">
+    <div class="container text-center">
+
+      <p class="mb-1 text-dark fw-semibold">
+        Meta Tag Generator
+      </p>
+
+      <p class="text-secondary small mb-0">
+        Responsive Bootstrap SEO Tool © 2026
+      </p>
+
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script -->
+  <script>
+    const form = document.getElementById('metaForm');
+    const output = document.getElementById('output');
+    const copyBtn = document.getElementById('copyBtn');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const title = document.getElementById('title').value;
+      const description = document.getElementById('description').value;
+      const keywords = document.getElementById('keywords').value;
+      const author = document.getElementById('author').value;
+
+      const metaCode = `
+<title>${title}</title>
+
+<meta name="description" content="${description}">
+<meta name="keywords" content="${keywords}">
+<meta name="author" content="${author}">
+
+<meta property="og:title" content="${title}">
+<meta property="og:description" content="${description}">
+<meta property="og:type" content="website">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${title}">
+<meta name="twitter:description" content="${description}">
+      `.trim();
+
+      output.value = metaCode;
+    });
+
+    copyBtn.addEventListener('click', function() {
+      output.select();
+      document.execCommand('copy');
+
+      copyBtn.innerHTML = `
+        <i class="fa-solid fa-check me-1"></i>
+        Copied
+      `;
+
+      setTimeout(() => {
+        copyBtn.innerHTML = `
+          <i class="fa-solid fa-copy me-1"></i>
+          Copy
+        `;
+      }, 2000);
+    });
+  </script>
+
+</body>
+</html>

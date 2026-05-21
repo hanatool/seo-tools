@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport' />
+
+    <title>Open Graph Generator</title>
+
+    <meta name="description" content="Generate Open Graph meta tags instantly for websites, blogs, landing pages, and social media sharing." />
+    <meta name="keywords" content="Open Graph Generator, OG Meta Tags, Meta Tags Generator, SEO Tools, Social Media Preview" />
+    <meta name="author" content="Open Graph Generator" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Open Graph Generator" />
+    <meta property="og:description" content="Create Open Graph meta tags easily for better social media sharing." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com" />
+    <meta property="og:image" content="https://example.com/image.jpg" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+</head>
+<body class="bg-light text-dark">
+
+    <!-- Header -->
+    <header class="border-bottom bg-white shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                <a href="#" class="text-decoration-none text-dark fw-bold fs-4">
+                    <i class="fa-solid fa-share-nodes me-2 text-primary"></i>
+                    Open Graph Generator
+                </a>
+
+                <nav>
+                    <a href="#" class="text-decoration-none text-secondary me-3">Home</a>
+                    <a href="#" class="text-decoration-none text-secondary me-3">Generator</a>
+                    <a href="#" class="text-decoration-none text-secondary">About</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="py-5 bg-white border-bottom">
+        <div class="container text-center">
+            <h1 class="fw-bold mb-3">
+                Open Graph Meta Tag Generator
+            </h1>
+
+            <p class="text-secondary mx-auto mb-4" style="max-width: 720px;">
+                Create professional Open Graph meta tags for websites, blogs, products,
+                and landing pages. Improve social media previews for Facebook, Twitter,
+                LinkedIn, and more.
+            </p>
+
+            <a href="#generator" class="btn btn-primary px-4">
+                <i class="fa-solid fa-wand-magic-sparkles me-2"></i>
+                Start Generating
+            </a>
+        </div>
+    </section>
+
+    <!-- Ad Space -->
+    <section class="py-4">
+        <div class="container">
+            <div class="bg-white border rounded-4 p-5 text-center shadow-sm">
+                <p class="text-secondary mb-2">
+                    Advertisement Space
+                </p>
+
+                <div class="text-muted">
+                    728 x 90 Banner Ads
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Generator -->
+    <section id="generator" class="pb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4 p-md-5">
+
+                            <h2 class="fw-bold mb-4">
+                                Generate Your Open Graph Tags
+                            </h2>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    Website Title
+                                </label>
+                                <input type="text" class="form-control form-control-lg" id="ogTitle" placeholder="Enter website title">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    Description
+                                </label>
+                                <textarea class="form-control" rows="4" id="ogDescription" placeholder="Enter website description"></textarea>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    Website URL
+                                </label>
+                                <input type="url" class="form-control form-control-lg" id="ogUrl" placeholder="https://example.com">
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">
+                                    Image URL
+                                </label>
+                                <input type="url" class="form-control form-control-lg" id="ogImage" placeholder="https://example.com/image.jpg">
+                            </div>
+
+                            <button class="btn btn-primary btn-lg w-100" onclick="generateOG()">
+                                <i class="fa-solid fa-code me-2"></i>
+                                Generate Meta Tags
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <!-- Output -->
+                    <div class="card border-0 shadow-sm rounded-4 mt-4">
+                        <div class="card-body p-4">
+
+                            <div class="container mb-3">
+                                <h4 class="fw-bold mb-0">
+                                    Generated Code
+                                </h4>
+
+                                <button class="btn btn-outline-secondary btn-sm" onclick="copyCode()">
+                                    <i class="fa-regular fa-copy me-1"></i>
+                                    Copy
+                                </button>
+                            </div>
+
+                            <textarea id="output" class="form-control" rows="12" readonly placeholder="Generated meta tags will appear here..."></textarea>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-5 bg-white border-top border-bottom">
+        <div class="container">
+            <div class="row g-4 text-center">
+
+                <div class="col-md-4">
+                    <div class="p-4">
+                        <div class="fs-1 text-primary mb-3">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+
+                        <h5 class="fw-bold">
+                            Fast Generator
+                        </h5>
+
+                        <p class="text-secondary mb-0">
+                            Instantly create Open Graph meta tags in seconds.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="p-4">
+                        <div class="fs-1 text-primary mb-3">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+
+                        <h5 class="fw-bold">
+                            Responsive Design
+                        </h5>
+
+                        <p class="text-secondary mb-0">
+                            Optimized for desktop, tablet, and mobile devices.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="p-4">
+                        <div class="fs-1 text-primary mb-3">
+                            <i class="fa-solid fa-share-from-square"></i>
+                        </div>
+
+                        <h5 class="fw-bold">
+                            Better Sharing
+                        </h5>
+
+                        <p class="text-secondary mb-0">
+                            Improve previews on Facebook, Twitter, and LinkedIn.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-4">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+
+                <div class="mb-3 mb-md-0">
+                    <span class="fw-bold">
+                        Open Graph Generator
+                    </span>
+                </div>
+
+                <div class="text-secondary small">
+                    © 2026 All Rights Reserved
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script -->
+    <script>
+        function generateOG() {
+
+            const title = document.getElementById('ogTitle').value;
+            const description = document.getElementById('ogDescription').value;
+            const url = document.getElementById('ogUrl').value;
+            const image = document.getElementById('ogImage').value;
+
+            const code = `
+<meta property="og:title" content="${title}">
+<meta property="og:description" content="${description}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="${url}">
+<meta property="og:image" content="${image}">
+            `.trim();
+
+            document.getElementById('output').value = code;
+        }
+
+        function copyCode() {
+
+            const output = document.getElementById('output');
+
+            output.select();
+            output.setSelectionRange(0, 99999);
+
+            navigator.clipboard.writeText(output.value);
+
+            alert('Meta tags copied successfully!');
+        }
+    </script>
+
+</body>
+</html>

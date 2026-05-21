@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport' />
+
+    <title>Keyword Density Checker</title>
+
+    <meta name="description" content="Free Keyword Density Checker tool to analyze keyword frequency, SEO optimization, and content balance easily." />
+    <meta name="keywords" content="keyword density checker, seo tool, keyword analyzer, seo checker, keyword frequency" />
+    <meta name="author" content="OpenAI" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body class="bg-light text-dark">
+
+    <!-- HEADER -->
+    <header class="bg-white border-bottom sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                <a href="#" class="text-decoration-none text-dark fw-bold fs-4">
+                    <i class="fa-solid fa-chart-simple me-2 text-primary"></i>
+                    Keyword Density Checker
+                </a>
+
+                <button class="btn btn-primary rounded-pill px-4">
+                    SEO Tool
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="py-5 bg-white border-bottom">
+        <div class="container text-center">
+
+            <h1 class="fw-bold mb-3">
+                Free Keyword Density Checker
+            </h1>
+
+            <p class="text-secondary mx-auto mb-4 col-lg-8">
+                Analyze your content instantly and check keyword frequency, keyword percentage,
+                and SEO optimization with this modern keyword density checker tool.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main class="py-5">
+        <div class="container">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+
+                    <!-- TOOL CARD -->
+                    <div class="card border-0 shadow-sm rounded-4 mb-4">
+                        <div class="card-body p-4">
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    Paste Your Content
+                                </label>
+
+                                <textarea
+                                    id="content"
+                                    class="form-control"
+                                    rows="10"
+                                    placeholder="Paste your article, blog post, or SEO content here..."
+                                ></textarea>
+                            </div>
+
+                            <div class="d-grid d-md-flex gap-2">
+                                <button class="btn btn-primary px-4 rounded-pill" onclick="analyzeKeywords()">
+                                    <i class="fa-solid fa-magnifying-glass-chart me-2"></i>
+                                    Analyze
+                                </button>
+
+                                <button class="btn btn-outline-secondary px-4 rounded-pill" onclick="clearContent()">
+                                    <i class="fa-solid fa-trash me-2"></i>
+                                    Clear
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- RESULT -->
+                    <div class="card border-0 shadow-sm rounded-4 mb-4">
+                        <div class="card-body p-4">
+
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fa-solid fa-chart-pie text-primary me-2"></i>
+                                <h2 class="h5 mb-0 fw-bold">
+                                    Results
+                                </h2>
+                            </div>
+
+                            <div class="row text-center mb-4">
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="bg-light rounded-4 p-4 border">
+                                        <h3 class="fw-bold" id="totalWords">0</h3>
+                                        <p class="text-secondary mb-0">Total Words</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="bg-light rounded-4 p-4 border">
+                                        <h3 class="fw-bold" id="uniqueWords">0</h3>
+                                        <p class="text-secondary mb-0">Unique Words</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="bg-light rounded-4 p-4 border">
+                                        <h3 class="fw-bold" id="topKeyword">-</h3>
+                                        <p class="text-secondary mb-0">Top Keyword</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="table align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th>Keyword</th>
+                                            <th>Count</th>
+                                            <th>Density</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody id="resultTable">
+                                        <tr>
+                                            <td colspan="3" class="text-center text-secondary py-4">
+                                                No analysis yet.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ADVERTISEMENT -->
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body text-center p-5">
+
+                            <div class="mb-3">
+                                <i class="fa-solid fa-rectangle-ad fs-1 text-secondary"></i>
+                            </div>
+
+                            <h3 class="h5 fw-bold">
+                                Advertisement Space
+                            </h3>
+
+                            <p class="text-secondary mb-0">
+                                You can place Google AdSense or banner advertisements here.
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- DESCRIPTION -->
+    <section class="py-5 bg-white border-top">
+        <div class="container">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+
+                    <h2 class="fw-bold mb-3">
+                        About This Tool
+                    </h2>
+
+                    <p class="text-secondary">
+                        This Keyword Density Checker helps website owners, bloggers,
+                        and SEO specialists analyze keyword usage inside content.
+                        It calculates total words, keyword frequency, and density percentage
+                        to improve search engine optimization and content balance.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-top py-4">
+        <div class="container">
+
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+
+                <div class="text-secondary">
+                    © 2026 Keyword Density Checker. All rights reserved.
+                </div>
+
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-decoration-none text-secondary">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#" class="text-decoration-none text-secondary">
+                        Terms
+                    </a>
+
+                    <a href="#" class="text-decoration-none text-secondary">
+                        Contact
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+        function analyzeKeywords() {
+
+            const text = document.getElementById('content').value.toLowerCase();
+
+            const cleanedText = text.replace(/[^\w\s]/g, '');
+
+            const words = cleanedText.split(/\s+/).filter(word => word.length > 2);
+
+            const totalWords = words.length;
+
+            const keywordMap = {};
+
+            words.forEach(word => {
+                keywordMap[word] = (keywordMap[word] || 0) + 1;
+            });
+
+            const sortedKeywords = Object.entries(keywordMap)
+                .sort((a, b) => b[1] - a[1]);
+
+            document.getElementById('totalWords').innerText = totalWords;
+
+            document.getElementById('uniqueWords').innerText = sortedKeywords.length;
+
+            document.getElementById('topKeyword').innerText =
+                sortedKeywords.length > 0 ? sortedKeywords[0][0] : '-';
+
+            const table = document.getElementById('resultTable');
+
+            table.innerHTML = '';
+
+            if (sortedKeywords.length === 0) {
+                table.innerHTML = `
+                    <tr>
+                        <td colspan="3" class="text-center text-secondary py-4">
+                            No valid keywords found.
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+
+            sortedKeywords.slice(0, 20).forEach(item => {
+
+                const keyword = item[0];
+                const count = item[1];
+                const density = ((count / totalWords) * 100).toFixed(2);
+
+                table.innerHTML += `
+                    <tr>
+                        <td>${keyword}</td>
+                        <td>${count}</td>
+                        <td>${density}%</td>
+                    </tr>
+                `;
+            });
+
+        }
+
+        function clearContent() {
+
+            document.getElementById('content').value = '';
+
+            document.getElementById('totalWords').innerText = '0';
+            document.getElementById('uniqueWords').innerText = '0';
+            document.getElementById('topKeyword').innerText = '-';
+
+            document.getElementById('resultTable').innerHTML = `
+                <tr>
+                    <td colspan="3" class="text-center text-secondary py-4">
+                        No analysis yet.
+                    </td>
+                </tr>
+            `;
+        }
+    </script>
+
+</body>
+</html>
