@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="UTM Builder - Create UTM tracking links easily and quickly.">
+  <meta name="keywords" content="UTM builder, campaign URL, marketing tools">
+  <meta name="author" content="UTM Builder Tool">
+
+  <title>UTM Builder</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">
+      <i class="fa-solid fa-link text-primary"></i> UTM Builder
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#ads">Ads</a></li>
+        <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<header class="py-5 bg-white border-bottom">
+  <div class="container text-center">
+    <h1 class="fw-bold text-primary">UTM Builder Tool</h1>
+    <p class="text-muted mb-0">Create tracking links for your marketing campaigns in seconds.</p>
+  </div>
+</header>
+
+<!-- Main Content -->
+<section class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <!-- UTM Form -->
+      <div class="col-lg-8">
+        <div class="card shadow-sm border-0">
+          <div class="card-body p-4">
+
+            <h5 class="mb-3 fw-bold">Build Your UTM Link</h5>
+
+            <div class="mb-3">
+              <label class="form-label">Website URL</label>
+              <input type="url" id="url" class="form-control" placeholder="https://example.com">
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Campaign Source</label>
+                <input type="text" id="source" class="form-control" placeholder="google, facebook">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Campaign Medium</label>
+                <input type="text" id="medium" class="form-control" placeholder="cpc, email">
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Campaign Name</label>
+              <input type="text" id="campaign" class="form-control" placeholder="summer_sale">
+            </div>
+
+            <button class="btn btn-primary w-100" onclick="generateUTM()">
+              <i class="fa-solid fa-bolt"></i> Generate Link
+            </button>
+
+            <hr>
+
+            <label class="form-label">Generated URL</label>
+            <div class="input-group">
+              <input type="text" id="result" class="form-control" readonly>
+              <button class="btn btn-outline-secondary" onclick="copyLink()">
+                <i class="fa-solid fa-copy"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Ads Section -->
+<section id="ads" class="py-4 bg-white border-top border-bottom">
+  <div class="container text-center">
+    <h6 class="text-muted mb-3">Advertisement</h6>
+    <div class="p-5 border rounded bg-light">
+      <p class="mb-0 text-secondary">Your ad banner space here</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="footer" class="py-4 bg-white border-top">
+  <div class="container text-center">
+    <p class="mb-0 text-muted">
+      © 2026 UTM Builder. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Script -->
+<script>
+function generateUTM() {
+  const url = document.getElementById("url").value;
+  const source = document.getElementById("source").value;
+  const medium = document.getElementById("medium").value;
+  const campaign = document.getElementById("campaign").value;
+
+  if (!url) {
+    alert("Please enter a URL");
+    return;
+  }
+
+  const params = new URLSearchParams();
+
+  if (source) params.append("utm_source", source);
+  if (medium) params.append("utm_medium", medium);
+  if (campaign) params.append("utm_campaign", campaign);
+
+  const finalURL = url.includes("?") 
+    ? url + "&" + params.toString()
+    : url + "?" + params.toString();
+
+  document.getElementById("result").value = finalURL;
+}
+
+function copyLink() {
+  const result = document.getElementById("result");
+  result.select();
+  result.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  alert("UTM link copied!");
+}
+</script>
+
+</body>
+</html>

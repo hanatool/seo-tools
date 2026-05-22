@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Keyword Suggestion Tool - Generate keyword ideas quickly and easily for SEO and content planning.">
+  <meta name="keywords" content="keyword tool, SEO keywords, keyword suggestion, content ideas">
+  <meta name="author" content="Keyword Suggestion Tool">
+
+  <title>Keyword Suggestion Tool</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light text-dark">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <i class="fa-solid fa-magnifying-glass"></i> KeywordTool
+      </a>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="py-5 text-center bg-white border-bottom">
+    <div class="container">
+      <h1 class="fw-bold">Keyword Suggestion Tool</h1>
+      <p class="text-muted">
+        Generate keyword ideas instantly for SEO, blogging, and content strategy.
+      </p>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container my-5">
+
+    <!-- AD SPACE TOP -->
+    <div class="alert alert-secondary text-center mb-4">
+      Advertisement Space (Top Banner)
+    </div>
+
+    <!-- TOOL BOX -->
+    <div class="card shadow-sm border-0 mb-4">
+      <div class="card-body">
+        <label class="form-label fw-semibold">Enter a keyword</label>
+        <input type="text" id="keywordInput" class="form-control mb-3" placeholder="e.g. digital marketing">
+
+        <button class="btn btn-primary w-100" onclick="generateKeywords()">
+          <i class="fa-solid fa-bolt"></i> Generate Suggestions
+        </button>
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="card border-0 shadow-sm">
+      <div class="card-body">
+        <h5 class="fw-bold mb-3">Suggestions</h5>
+        <ul id="resultList" class="list-group list-group-flush"></ul>
+      </div>
+    </div>
+
+    <!-- AD SPACE BOTTOM -->
+    <div class="alert alert-secondary text-center mt-4">
+      Advertisement Space (Bottom Banner)
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <small>&copy; 2026 Keyword Suggestion Tool. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    const keywordDatabase = {
+      "marketing": ["digital marketing", "content marketing", "affiliate marketing", "email marketing",
+        "social media marketing"
+      ],
+      "seo": ["seo tools", "on page seo", "off page seo", "keyword research", "technical seo"],
+      "business": ["small business ideas", "online business", "business plan", "startup ideas", "business growth"],
+      "default": ["how to start", "best tips", "guide", "tutorial", "strategy"]
+    };
+
+    function generateKeywords() {
+      const input = document.getElementById("keywordInput").value.toLowerCase().trim();
+      const resultList = document.getElementById("resultList");
+
+      resultList.innerHTML = "";
+
+      let suggestions = keywordDatabase.default;
+
+      for (let key in keywordDatabase) {
+        if (input.includes(key)) {
+          suggestions = keywordDatabase[key];
+        }
+      }
+
+      suggestions.forEach(item => {
+        const li = document.createElement("li");
+        li.className = "list-group-item";
+        li.innerHTML = `<i class="fa-solid fa-angle-right text-primary me-2"></i>${item}`;
+        resultList.appendChild(li);
+      });
+    }
+  </script>
+
+</body>
+
+</html>
