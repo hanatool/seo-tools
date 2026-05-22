@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Schema Markup Generator</title>
-  <meta name="description" content="Free Schema Markup Generator tool to create JSON-LD structured data easily for SEO." />
+  <meta name="description"
+    content="Free Schema Markup Generator tool to create JSON-LD structured data easily for SEO." />
   <meta name="keywords" content="schema markup, json-ld, seo tool, structured data generator" />
   <meta name="author" content="Schema Generator Tool" />
 
@@ -16,136 +18,140 @@
 
 </head>
 
-<body class="bg-light">
+<body class="bg-light text-dark">
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#">SchemaGen</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">SchemaGen</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#generator">Generator</a></li>
-        <li class="nav-item"><a class="nav-link" href="#ads">Ads</a></li>
-      </ul>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#generator">Generator</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ads">Ads</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- HEADER -->
-<header class="py-5 text-center bg-white border-bottom">
-  <div class="container">
-    <h1 class="fw-bold">Schema Markup Generator</h1>
+  <!-- HEADER -->
+  <header class="py-5 text-center bg-white border-bottom">
+    <div class="container">
+      <h1 class="fw-bold">Schema Markup Generator</h1>
+      <p class="text-muted">
+        Generate JSON-LD structured data instantly for better SEO and Google rich results.
+      </p>
+    </div>
+  </header>
+
+  <!-- ADS TOP -->
+  <section id="ads" class="container my-4">
+    <div class="alert alert-secondary text-center">
+      <strong>Advertisement Space</strong> (Top Banner Ad)
+    </div>
+  </section>
+
+  <!-- GENERATOR -->
+  <section id="generator" class="container my-5">
+    <div class="row g-4">
+
+      <!-- FORM -->
+      <div class="col-md-6">
+        <div class="card shadow-sm border-0">
+          <div class="card-body">
+            <h4 class="mb-3"><i class="fa-solid fa-code"></i> Generator</h4>
+
+            <div class="mb-3">
+              <label class="form-label">Website Name</label>
+              <input type="text" id="name" class="form-control" placeholder="My Website">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Website URL</label>
+              <input type="text" id="url" class="form-control" placeholder="https://example.com">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Type</label>
+              <select id="type" class="form-select">
+                <option>WebSite</option>
+                <option>Article</option>
+                <option>Organization</option>
+                <option>LocalBusiness</option>
+              </select>
+            </div>
+
+            <button class="btn btn-primary w-100" onclick="generateSchema()">
+              Generate Schema
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- OUTPUT -->
+      <div class="col-md-6">
+        <div class="card shadow-sm border-0">
+          <div class="card-body">
+            <h4 class="mb-3"><i class="fa-solid fa-database"></i> Output JSON-LD</h4>
+            <textarea id="output" class="form-control" rows="12" readonly></textarea>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ADS MIDDLE -->
+  <section class="container my-4">
+    <div class="alert alert-secondary text-center">
+      <strong>Advertisement Space</strong> (Middle Content Ad)
+    </div>
+  </section>
+
+  <!-- DESCRIPTION -->
+  <section class="container my-5 bg-white p-4 rounded shadow-sm">
+    <h3>About This Tool</h3>
     <p class="text-muted">
-      Generate JSON-LD structured data instantly for better SEO and Google rich results.
+      This Schema Markup Generator helps you create structured data (JSON-LD) for SEO optimization.
+      Add your website details and generate ready-to-use schema code for Google search enhancement.
     </p>
-  </div>
-</header>
+  </section>
 
-<!-- ADS TOP -->
-<section id="ads" class="container my-4">
-  <div class="alert alert-secondary text-center">
-    <strong>Advertisement Space</strong> (Top Banner Ad)
-  </div>
-</section>
-
-<!-- GENERATOR -->
-<section id="generator" class="container my-5">
-  <div class="row g-4">
-
-    <!-- FORM -->
-    <div class="col-md-6">
-      <div class="card shadow-sm border-0">
-        <div class="card-body">
-          <h4 class="mb-3"><i class="fa-solid fa-code"></i> Generator</h4>
-
-          <div class="mb-3">
-            <label class="form-label">Website Name</label>
-            <input type="text" id="name" class="form-control" placeholder="My Website">
-          </div>
-
-          <div class="mb-3">
-            <label class="form-label">Website URL</label>
-            <input type="text" id="url" class="form-control" placeholder="https://example.com">
-          </div>
-
-          <div class="mb-3">
-            <label class="form-label">Type</label>
-            <select id="type" class="form-select">
-              <option>WebSite</option>
-              <option>Article</option>
-              <option>Organization</option>
-              <option>LocalBusiness</option>
-            </select>
-          </div>
-
-          <button class="btn btn-primary w-100" onclick="generateSchema()">
-            Generate Schema
-          </button>
-        </div>
-      </div>
+  <!-- FOOTER -->
+  <footer class="bg-primary text-white text-center py-4 mt-5">
+    <div class="container">
+      <p class="mb-0">© <script type='text/javascript'>
+          var creditsyear = new Date();
+          document.write(creditsyear.getFullYear());
+        </script> SchemaGen Tool. All rights reserved.</p>
     </div>
+  </footer>
 
-    <!-- OUTPUT -->
-    <div class="col-md-6">
-      <div class="card shadow-sm border-0">
-        <div class="card-body">
-          <h4 class="mb-3"><i class="fa-solid fa-database"></i> Output JSON-LD</h4>
-          <textarea id="output" class="form-control" rows="12" readonly></textarea>
-        </div>
-      </div>
-    </div>
+  <!-- BOOTSTRAP JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-  </div>
-</section>
+  <!-- SCRIPT -->
+  <script>
+    function generateSchema() {
+      const name = document.getElementById("name").value;
+      const url = document.getElementById("url").value;
+      const type = document.getElementById("type").value;
 
-<!-- ADS MIDDLE -->
-<section class="container my-4">
-  <div class="alert alert-secondary text-center">
-    <strong>Advertisement Space</strong> (Middle Content Ad)
-  </div>
-</section>
+      const schema = {
+        "@context": "https://schema.org",
+        "@type": type,
+        "name": name,
+        "url": url
+      };
 
-<!-- DESCRIPTION -->
-<section class="container my-5 bg-white p-4 rounded shadow-sm">
-  <h3>About This Tool</h3>
-  <p class="text-muted">
-    This Schema Markup Generator helps you create structured data (JSON-LD) for SEO optimization.
-    Add your website details and generate ready-to-use schema code for Google search enhancement.
-  </p>
-</section>
-
-<!-- FOOTER -->
-<footer class="bg-primary text-white text-center py-4 mt-5">
-  <div class="container">
-    <p class="mb-0">© 2026 SchemaGen Tool. All rights reserved.</p>
-  </div>
-</footer>
-
-<!-- BOOTSTRAP JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- SCRIPT -->
-<script>
-function generateSchema() {
-  const name = document.getElementById("name").value;
-  const url = document.getElementById("url").value;
-  const type = document.getElementById("type").value;
-
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": type,
-    "name": name,
-    "url": url
-  };
-
-  document.getElementById("output").value = JSON.stringify(schema, null, 2);
-}
-</script>
+      document.getElementById("output").value = JSON.stringify(schema, null, 2);
+    }
+  </script>
 
 </body>
+
 </html>

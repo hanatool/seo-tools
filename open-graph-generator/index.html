@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
-    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport' />
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'
+        name='viewport' />
 
     <title>Open Graph Generator</title>
 
-    <meta name="description" content="Generate Open Graph meta tags instantly for websites, blogs, landing pages, and social media sharing." />
-    <meta name="keywords" content="Open Graph Generator, OG Meta Tags, Meta Tags Generator, SEO Tools, Social Media Preview" />
+    <meta name="description"
+        content="Generate Open Graph meta tags instantly for websites, blogs, landing pages, and social media sharing." />
+    <meta name="keywords"
+        content="Open Graph Generator, OG Meta Tags, Meta Tags Generator, SEO Tools, Social Media Preview" />
     <meta name="author" content="Open Graph Generator" />
 
     <!-- Open Graph -->
@@ -24,6 +28,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
 </head>
+
 <body class="bg-light text-dark">
 
     <!-- Header -->
@@ -35,26 +40,26 @@
                     Open Graph Generator
                 </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="navbarMenu">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
-                    </li>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#tool">Tool</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tool">Tool</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                </ul>
-            </div>
-            </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
         </div>
     </header>
 
@@ -110,28 +115,32 @@
                                 <label class="form-label fw-semibold">
                                     Website Title
                                 </label>
-                                <input type="text" class="form-control form-control-lg" id="ogTitle" placeholder="Enter website title">
+                                <input type="text" class="form-control form-control-lg" id="ogTitle"
+                                    placeholder="Enter website title">
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label fw-semibold">
                                     Description
                                 </label>
-                                <textarea class="form-control" rows="4" id="ogDescription" placeholder="Enter website description"></textarea>
+                                <textarea class="form-control" rows="4" id="ogDescription"
+                                    placeholder="Enter website description"></textarea>
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label fw-semibold">
                                     Website URL
                                 </label>
-                                <input type="url" class="form-control form-control-lg" id="ogUrl" placeholder="https://example.com">
+                                <input type="url" class="form-control form-control-lg" id="ogUrl"
+                                    placeholder="https://example.com">
                             </div>
 
                             <div class="mb-4">
                                 <label class="form-label fw-semibold">
                                     Image URL
                                 </label>
-                                <input type="url" class="form-control form-control-lg" id="ogImage" placeholder="https://example.com/image.jpg">
+                                <input type="url" class="form-control form-control-lg" id="ogImage"
+                                    placeholder="https://example.com/image.jpg">
                             </div>
 
                             <button class="btn btn-primary btn-lg w-100" onclick="generateOG()">
@@ -157,7 +166,8 @@
                                 </button>
                             </div>
 
-                            <textarea id="output" class="form-control" rows="12" readonly placeholder="Generated meta tags will appear here..."></textarea>
+                            <textarea id="output" class="form-control" rows="12" readonly
+                                placeholder="Generated meta tags will appear here..."></textarea>
 
                         </div>
                     </div>
@@ -236,7 +246,10 @@
                 </div>
 
                 <div class="text-secondary small">
-                    © 2026 All Rights Reserved
+                    © <script type='text/javascript'>
+                        var creditsyear = new Date();
+                        document.write(creditsyear.getFullYear());
+                    </script> All Rights Reserved
                 </div>
 
             </div>
@@ -280,4 +293,5 @@
     </script>
 
 </body>
+
 </html>

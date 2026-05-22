@@ -22,7 +22,7 @@
 <body class="bg-light text-dark">
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
     <div class="container">
       <a class="navbar-brand fw-bold text-dark" href="#">
         <i class="fa-solid fa-code text-primary me-2"></i>MetaTag Generator
@@ -108,7 +108,10 @@
   <!-- Footer -->
   <footer class="bg-white border-top mt-5 py-3">
     <div class="container text-center text-muted">
-      <small>© 2026 Meta Tag Generator. All rights reserved.</small>
+      <small>© <script type='text/javascript'>
+          var creditsyear = new Date();
+          document.write(creditsyear.getFullYear());
+        </script> Meta Tag Generator. All rights reserved.</small>
     </div>
   </footer>
 
@@ -122,7 +125,7 @@
 
       let meta = `
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/>
 <title>${title}</title>
 <meta name="description" content="${description}">
 <meta name="keywords" content="${keywords}">
