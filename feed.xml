@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+
+  <channel>
+
+    <title>Hanapha SEO Tools</title>
+    <link>https://tools.hanapha.com/seo-tools/</link>
+
+    <description>
+      Free online SEO tools for keyword analysis, meta tag generation, sitemap creation, backlink checking, SERP previews, schema markup, and website optimization.
+    </description>
+
+    <language>en-us</language>
+
+    <item>
+      <title>Backlink Checker</title>
+      <link>https://tools.hanapha.com/seo-tools/backlink-checker</link>
+      <description>
+        Analyze backlinks and monitor website link profiles online.
+      </description>
+    </item>
+
+    <item>
+      <title>Canonical URL Generator</title>
+      <link>https://tools.hanapha.com/seo-tools/canonical-url-generator</link>
+      <description>
+        Generate canonical URL tags for SEO optimization.
+      </description>
+    </item>
+
+    <item>
+      <title>Domain Authority Checker</title>
+      <link>https://tools.hanapha.com/seo-tools/domain-authority-checker</link>
+      <description>
+        Check website domain authority and SEO strength online.
+      </description>
+    </item>
+
+    <item>
+      <title>Keyword Density Checker</title>
+      <link>https://tools.hanapha.com/seo-tools/keyword-density-checker</link>
+      <description>
+        Analyze keyword density and content optimization instantly.
+      </description>
+    </item>
+
+    <item>
+      <title>Keyword Suggestion Tool</title>
+      <link>https://tools.hanapha.com/seo-tools/keyword-suggestion-tool</link>
+      <description>
+        Discover keyword ideas and SEO suggestions online.
+      </description>
+    </item>
+
+    <item>
+      <title>Meta Tag Generator</title>
+      <link>https://tools.hanapha.com/seo-tools/meta-tag-generator</link>
+      <description>
+        Generate SEO-friendly meta tags for websites easily.
+      </description>
+    </item>
+
+    <item>
+      <title>Open Graph Generator</title>
+      <link>https://tools.hanapha.com/seo-tools/open-graph-generator</link>
+      <description>
+        Create Open Graph tags for social media sharing.
+      </description>
+    </item>
+
+    <item>
+      <title>Redirect Checker</title>
+      <link>https://tools.hanapha.com/seo-tools/redirect-checker</link>
+      <description>
+        Check URL redirects and HTTP response chains online.
+      </description>
+    </item>
+
+    <item>
+      <title>Robots TXT Generator</title>
+      <link>https://tools.hanapha.com/seo-tools/robots-txt-generator</link>
+      <description>
+        Generate robots.txt files for search engine crawling control.
+      </description>
+    </item>
+
+    <item>
+      <title>Schema Markup Generator</title>
+      <link>https://tools.hanapha.com/seo-tools/schema-markup-generator</link>
+      <description>
+        Generate structured data schema markup for SEO enhancement.
+      </description>
+    </item>
+
+    <item>
+      <title>SERP Preview Tool</title>
+      <link>https://tools.hanapha.com/seo-tools/serp-preview-tool</link>
+      <description>
+        Preview how pages appear in Google search results.
+      </description>
+    </item>
+
+    <item>
+      <title>Sitemap Generator</title>
+      <link>https://tools.hanapha.com/seo-tools/sitemap-generator</link>
+      <description>
+        Create XML sitemaps for websites quickly and easily.
+      </description>
+    </item>
+
+    <item>
+      <title>Slug Generator</title>
+      <link>https://tools.hanapha.com/seo-tools/slug-generator</link>
+      <description>
+        Generate SEO-friendly URL slugs instantly online.
+      </description>
+    </item>
+
+    <item>
+      <title>UTM Builder</title>
+      <link>https://tools.hanapha.com/seo-tools/utm-builder</link>
+      <description>
+        Build UTM tracking URLs for marketing campaigns online.
+      </description>
+    </item>
+
+  </channel>
+
+</rss>

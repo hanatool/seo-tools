@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://tools.hanapha.com/seo-tools/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url><loc>https://tools.hanapha.com/seo-tools/backlink-checker</loc></url>
+  <url><loc>https://tools.hanapha.com/seo-tools/canonical-url-generator</loc></url>
+  <url><loc>https://tools.hanapha.com/seo-tools/domain-authority-checker</loc></url>
+  <url><loc>https://tools.hanapha.com/seo-tools/keyword-density-checker</loc></url>
+  <url><loc>https://tools.hanapha.com/seo-tools/keyword-suggestion-tool</loc></url>
+  <url><loc>https://tools.hanapha.com/seo-tools/meta-tag-generator</loc></url>
+  <url><loc>https://tools.hanapha.com/seo-tools/open-graph-generator</loc></url>
+  <url><loc>https://tools.hanapha.com/seo-tools/redirect-checker</loc></url>
+  <url><loc>https://tools.hanapha.com/seo-tools/robots-txt-generator</loc></url>
+  <url><loc>https://tools.hanapha.com/seo-tools/schema-markup-generator</loc></url>
+  <url><loc>https://tools.hanapha.com/seo-tools/serp-preview-tool</loc></url>
+  <url><loc>https://tools.hanapha.com/seo-tools/sitemap-generator</loc></url>
+  <url><loc>https://tools.hanapha.com/seo-tools/slug-generator</loc></url>
+  <url><loc>https://tools.hanapha.com/seo-tools/utm-builder</loc></url>
+
+  <url><loc>https://tools.hanapha.com/seo-tools/404.html</loc></url>
+  <url><loc>https://tools.hanapha.com/seo-tools/index.html</loc></url>
+  <url><loc>https://tools.hanapha.com/seo-tools/README.md</loc></url>
+
+</urlset>
